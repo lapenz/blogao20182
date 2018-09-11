@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Homepage</h1>
+
+<% @posts.each do |post| %>
+  <h2>Title: <%= post.title %></h2>
+  <h3>Subject: <%= post.subject %></h3>
+  <h4>Text: <%= post.text %></h4>
+  <strong><%= post.author.name %></strong>
+  <small><%= post.created_at %></small>
+
+  <hr/>
+<% end %>
